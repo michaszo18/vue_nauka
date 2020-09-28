@@ -12,14 +12,12 @@
 </head>
 
 <body>
-    <header>
-        <h1>Vue Course Goals</h1>
-    </header>
     <section id="user-goal">
-        <h2>My Course Goal</h2>
-        <p>{{ courseGoal }}</p>
-        <p>{{outputGoal()}}</p>
-        <a v-bind:href="vueLink">{{vueLink}}</a>
+        <h3>You work for: {{ i }}s. in this section and {{ j }}s. in total.</h3>
+        <button v-on:click="timer()">{{ actionText }}</button>
+        <div v-for="event in workHisory">
+            -start time- {{ event.startWork }} -end time- {{ event.endWork }} -work time- {{event.workTime}}
+        </div>
     </section>
 </body>
 
